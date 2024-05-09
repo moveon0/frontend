@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 테이블 태그
+        tr: 테이블의 행
+        td: 테이블의 열
+        th: 테이블 헤더( 각 열을 대표하는 셀)
+        또한 테이블 태그는 thead - 헤더 영역, tbody - 본문영역, tfoot -푸터 영역-->
+        <table border="1">
+            <thead><th> 테이블 제목</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1행 1열</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <!--1행 2열-->
+        <table border="1">
+            <tr>
+                <td>1행 1열</td>
+                <td>1행 2열</td>
+
+            </tr>
+        </table>
+
+        <hr>
+        <!--2행 1열-->
+        <table border="1">
+            <tr>
+                <td>1행 1열</td>
+            
+            </tr>
+            <tr>
+                <td>2행 1열</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!--2행 2열-->
+        <table border="1">
+            <tr>
+                <td>1행 1열</td>
+                <td>1행 2열</td>
+            </tr>
+            <tr>
+                <td>2행 1열</td>
+                <td>2행 2열</td>
+            </tr>
+        </table>
+
+        <hr>
+        <!-- 테이블 열 합치기-->
+        <table border="1">
+            <th colspan="3">
+                메뉴판
+            </th>
+            <tr>
+                <td>짜장</td>
+                <td>짬뽕</td>
+                <td>탕수육</td>
+            </tr>
+        </table>
+
+        <hr>
+
+        <!-- 테이블 행 합치기-->
+        <table border="1">
+            <tr>
+                <td rowspan="2">메뉴판</td>
+                <td>짜장</td>
+            </tr>
+            <tr>
+                <td>짬뽕</td>
+            </tr>
+        </table>
+        <hr>
+
+        <table border="1">
+            <tr>
+                <td rowspan="3">개인정보</td>
+                <td>이름</td>
+                <td>   </td>
+            </tr>
+            <tr>
+                
+                <td>학과/학번</td>
+                <td></td>
+            </tr>
+            <tr>
+                
+                <td>연락처</td>
+                <td>   </td>
+            </tr>
+            <tr>
+                <th>지원분야</th>
+                <td colspan="4" width="100px"></td>
+            </tr>
+        </table>
+
+        <table border="1">
+            <tr>
+                <td>월</td>
+                <td>화</td>
+                <Td>수</Td>
+                <td>목</td>
+                <td>금</td>
+                <td>토</td>
+                <td>일</td>
+            </tr>
+            <tr>
+                <td colspan="2">쌀밥</td>
+                <td colspan="3">잡곡밥</td>
+                <td>스파게티</td>
+                <td>짜장면</td>
+
+            </tr>
+            <tr>
+                <td>불고기</td>
+                <td>떡갈비</td>
+                <td>미니돈까스</td>
+                <td>오징어볶음</td>
+                <td>제육볶음</td>
+                <td rowspan="2">피클</td>
+                <td>단무지</td>
+            </tr>
+            <tr>
+                <td>배추김치</td>
+                <td>깍두기</td>
+                <td>미소된장국</td>
+                <td>동치미</td>
+                <td>고추절임</td>
+                
+                <td>짬뽕국물</td>
+            </tr>
+        </table>
+
+</body>
+</html>
