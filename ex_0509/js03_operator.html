@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let str = "<table border='1'>";
+            str += "<tr>";
+            str += "<td>1</td><td>2</td><td>3</td>";
+            str +="</tr>";
+            str += "</table>";
+        document.write(str);
+        document.body.innerHTML = str;
+
+        let a = 5;
+        let b = a++;
+
+        document.write('a :',a,' b :',b);
+        document.write('<hr>')
+
+        let age = 20;
+        let result = age > 20 && age <30;
+        document.write(result);
+
+        document.write('<hr>');
+
+        let kor = 100;
+        let eng = 77;
+        let math = 65;
+
+        result = (kor + eng + math)/3;
+        document.write(result.toFixed(2));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

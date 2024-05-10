@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .order{
+            display: flex;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            background: yellowgreen;
+            font-size: 50px;
+            color: white;
+            border: 1px solid black;
+            margin: 10px;
+            text-align: center;
+        }
+        /*숫자가 작은 것부터 배치*/
+        div:nth-child(1){
+            order:0
+        }
+        div:nth-child(2){
+            order:1
+        }
+        div:nth-child(3){
+            order:-1
+        }
+        div:nth-child(4){
+            order:0
+        }
+        div:nth-child(5){
+            order:2
+        }
+
+    </style>
+</head>
+<body>
+    <section class="order">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+
+    </section>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section{
+            display: flex;
+            border:  dashed black;
+            height: 300px;
+        }
+
+        div{
+            width: 100px;
+            margin: 10px;
+            color: white;/*글씨색깔*/
+            text-align: center;
+            border: 1px solid black;
+        }
+        .a{
+            background: red;
+        }
+        .b{
+            background: yellow;
+            font-size: 36px;
+        }
+        .c{
+            background: blue;
+            font-size: 90px;
+        }
+        .d{
+            background: green;
+            font-size: 50px;
+        }
+        .e{
+            background: violet;
+            font-size: 10px;
+        }
+        .stretch{
+            align-items: stretch;
+        }
+        .flex-start{
+            align-items: flex-start;
+        }
+        .center{
+            align-items: center;
+        }
+        .flex-end{
+            align-items: flex-end;
+        }
+        .baseline{
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+    <h1>align-items</h1>
+    <hr>
+    <p>stretch</p>
+    <section class="stretch">
+        <div class="a"> a</div>
+        <div class="b"> b</div>
+        <div class="c"> c</div>
+        <div class="d"> d</div>
+        <div class="e"> e</div>
+    </section>
+    <p>flex-start</p>
+    <section class="flex-start">
+        <div class="a"> a</div>
+        <div class="b"> b</div>
+        <div class="c"> c</div>
+        <div class="d"> d</div>
+        <div class="e"> e</div>
+    </section>
+    <p>center</p>
+    <section class="center">
+        <div class="a"> a</div>
+        <div class="b"> b</div>
+        <div class="c"> c</div>
+        <div class="d"> d</div>
+        <div class="e"> e</div>
+    </section>
+    <p>flex-end</p>
+    <section class="flex-end">
+        <div class="a"> a</div>
+        <div class="b"> b</div>
+        <div class="c"> c</div>
+        <div class="d"> d</div>
+        <div class="e"> e</div>
+    </section>
+    <p>baseline</p>
+    <section class="baseline">
+        <div class="a"> a</div>
+        <div class="b"> b</div>
+        <div class="c"> c</div>
+        <div class="d"> d</div>
+        <div class="e"> e</div>
+    </section>
+</body>
+</html>
