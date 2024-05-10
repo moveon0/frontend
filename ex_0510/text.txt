@@ -1,0 +1,13 @@
+HTML요소의 선택
+자바스크립트로 HTML요소를 제어하려면 그 전에 제어하고자 하는 요소 객체를 먼저 가져와야 한다.
+
+document.getElementByTagName('태그명')
+해당 태그를 모두 선택함
+document.getElementById('아이디값')
+해당 아이디를 갖고 있는 요소 선택
+document.getElementByClassName('클래스명')
+해당 클래스에 속한 요소를 모두 선택함
+document.getElementByName(name값)
+해당 name 속성값을 가지는 요소를 선택함
+document.querySelectorAll(선택자)
+해당 선택자로 선택되는 요소를 모두 선택함

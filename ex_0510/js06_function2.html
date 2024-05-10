@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //미리 정의된 전역함수
+        //자바스크립트는 사용자의 편의를 위해 다양한 기능의 여러
+        //전역 함수를 미리 정의하여 제공한다.
+        //이러한 전역 함수는 자바스크립트의 어떤 타입의 객체에서도
+        //바로 사용할 수 있다.
+
+        //eval()
+        //문자열로 표현된 자바스크립트 코드를 실행하는 함수
+        var x = 10; y = 20;
+        var a = eval('x+y')
+        var b = eval('y*3')
+        document.write(`${a} <br> ${b}`)
+
+        //isFinite()
+        //전달된 값이 유한한 수인지를 검사하여 그 결과를 반환한다.
+        //만약 인수로 전달된 값이 숫자가 아니라면, 숫자로 변환하여 검사한다.
+
+        document.write('<br>',isFinite(123),'<br>');
+        document.write(isFinite(123e100),'<br>');
+        document.write(isFinite(true),'<br>');
+        document.write(isFinite(false),'<br>');
+        document.write('<hr>')
+        //isNaN()
+        //함수로 전달된 값이 NaN인지 검사하여 결과를 반환
+        //만약 인수로 전달된 값이 숫자가 아니라면, 숫자로 강제 변환하여 검사
+        //NaN : Not a number
+
+        document.write(`${isNaN(123)}<br>`)
+        document.write(`${isNaN("123")}<br>`)//false
+        document.write(`${isNaN("문자열")}<br>`)//true
+        document.write(`${isNaN(undefined)}<br>`)//true
+        document.write(`${isNaN(NaN)}<br>`)//true
+
+        document.write('<hr>')
+
+        //형변환함수
+        //Number()
+        //전달받은 객체의 값을 숫자로 반환한다.
+        console.log(Number("123")+1);
+        console.log(Number(true));
+        console.log(Number(false));
+        console.log(Number(new Date()));
+        console.log(Number(null));
+
+        //String()
+        //전달받은 객체의 값을 문자열로 반환
+        console.log(String(123)+1)
+        console.log(new Date())
+
+        //화살표함수
+        function f(){};
+        //const f = () => {};
+
+        //let sum = (a,b) => {return a + b};
+        //return과 중괄호 생략가능
+        let sum = (a,b) => a+b;
+
+        //화살표함수 문법
+        //매개변수가 하나면 소괄호 생략 가능
+        
+        //매개변수가 없을 때
+        () => {};
+
+        //매개변수가 하나일 때
+        x => {};
+
+        //매개변수가 여러 개인 경우, 소괄호를 생략할 수 없다.
+        (x,y) => {};
+
+        //객체 리터럴 반환
+        //객체 리터럴을 반환하려면 소괄호로 감싸야 한다.
+        //왜냐하면 중괄호만 쓰게 되면 함수블럭인지 객체 블럭인지 판단하기 어렵다.
+
+        //() => {return {a : 1}};
+        () => ({a:1});
+
+        //화살표함수의 특징
+        //화살표 함수에는 this가 없다.
+        //화살표 함수에서 this로 접근하면 자신이 아닌 외부에서 값을 가져온다.
+
+        var name = "Global";
+
+        let user = {
+            name : "Lee",
+            sayHi : () => {//일반함수
+                console.log(this.name);
+            }
+        }
+
+        user.sayHi()
+
+        //화살표 함수는 생성자 함수가 없다.
+        let User = (name) => {this.name = name;}
+        
+        //화살표 함수는 객체를 생성하는 용도로 사용할 수 없다.
+        let user2 = new User('홍길동')
+        console.log(user2.name)
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
