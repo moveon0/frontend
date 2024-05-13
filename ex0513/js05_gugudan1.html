@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function gugu(){
+            //1. input 태그에 쓰여진 value를 읽어온다.
+            let dan = document.getElementById("dan").value;
+            let s=''
+            //2. dan에 해당하는 구구단 계산하기
+            for(var i = 1; i <=9; i++){
+                s += `${dan} * ${i} = ${dan*i}<br>`;
+            }
+
+            //3. div에 계산결과 돌려주기
+            document.getElementById('disp').innerHTML = s;
+        }
+        let b_show = true;
+        function show(){
+            b_show = !b_show;
+            document.getElementById('bt_show').value = b_show ? "숨기기" : '보이기';
+
+            //div의 display 속성을 none이나 block으로 바꾼다.
+            document.getElementById('disp').style.display = b_show ? 'block' : 'none';   
+        }
+    </script>
+    <style>
+        #disp{
+            width: 300px;
+            height: 300px;
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <p>단:
+        <input type="text" id="dan">
+        <input type="button" value="계산시작" onclick="gugu()">
+        <input type="button" value="숨기기" id="bt_show" onclick="show()">
+    </p>
+    <hr>
+    <div id="disp">여기에 구구단</div>
+</body>
+</html>

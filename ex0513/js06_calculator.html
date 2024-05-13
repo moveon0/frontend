@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     #c{
+        display: flex;
+     }
+    </style>
+    <script>
+        function plus(){
+            let s1 = document.getElementById('su1').value
+            let s2 = document.getElementById('su2').value
+            let div = document.getElementById('result')
+            let result = parseInt(s1,10)+parseInt(s2,10);
+            div.innerHTML = result
+            
+        }
+
+        function minus(){
+            let s1 = document.getElementById('su1').value
+            let s2 = document.getElementById('su2').value
+            let div = document.getElementById('result')
+            let result = parseInt(s1,10)-parseInt(s2,10);
+            div.innerHTML = result
+            
+        }
+        function time(){
+            let s1 = document.getElementById('su1').value
+            let s2 = document.getElementById('su2').value
+            let div = document.getElementById('result')
+            let result = parseInt(s1,10)*parseInt(s2,10);
+            div.innerHTML = result
+            
+        }
+        function div(){
+            let s1 = document.getElementById('su1').value
+            let s2 = document.getElementById('su2').value
+            let div = document.getElementById('result')
+            let result =~~( parseInt(s1,10)/parseInt(s2,10))
+            div.innerHTML = result
+            
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>수1</td>
+            <td><input type="text" id="su1"></td>
+        </tr>
+        <tr>
+            <td>수2</td>
+            <td><input type="text" id="su2"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <div id="c">
+
+                    <input type="button" value="+" id="plus" onclick="plus()">
+                    <input type="button" value="-" id="minus" onclick="minus()">
+                    <input type="button" value="*" id="time" onclick="time()">
+                    <input type="button" value="/" id="div" onclick="div()">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>결과</td>
+            <td><div id="result"></div></td>
+        </tr>
+        
+    </table>
+</body>
+</html>

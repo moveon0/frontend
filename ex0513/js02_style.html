@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p_id">자바스크립트로 css 바꾸기 연습</p>
+
+
+    <script>
+        //선택한 dom 요소, style 객체로 태그의 css를 변경할 수 있다.
+        let element =document.getElementById("p_id");
+
+        //html 요소에 배경색 주기
+        element.style.backgroundColor = "yellowgreen";
+
+        //html 요소에 글자색 바꾸기
+        element.style.color = 'red';
+    
+        //html 요소에 폰트 크기 바꾸기
+        element.style.fontSize = '30px'
+
+        //테두리 주기
+        element.style.border = '2px solid black'
+
+        //클래스 주기
+        element.classList.add('newClass')
+        console.log(element.getAttribute('class'))
+    </script>
+</body>
+</html>

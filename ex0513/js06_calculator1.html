@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            display: flex;
+            
+        }
+        li{
+            list-style: none;
+            margin: 5px;
+        }
+        input{
+            border: none;
+        }
+    </style>
+    <script>
+        function cal(n){
+            let num1 = Number(document.getElementById('su1').value)
+            let num2 = Number(document.getElementById('su2').value)//값
+            let result =document.getElementById('result')//태그
+
+            switch(n){
+                case '+':
+                    result.value = num1 + num2;
+                    break;
+                case '-': 
+                    result.value = num1 - num2;
+                    break;
+                case '*': 
+                    result.value = num1 * num2;
+                    break;
+                case '/': 
+                    result.value = num1 / num2;
+            }
+            
+        }
+    </script>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td class="su">수1</td>
+            <td><input type="text"  id="su1" placeholder="정수만 입력하세요"></td>
+        </tr>
+        <tr>
+            <td class="su">수2</td>
+            <td><input type="text" id="su2" placeholder="정수만 입력하세요"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <ul>
+                    <li><input type="button" value="+" onclick="cal()"></li>
+                    <li><input type="button" value="-" onclick="cal()"></li>
+                    <li><input type="button" value="*" onclick="cal()"></li>
+                    <li><input type="button" value="/" onclick="cal()"></li>
+
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <th>결과</th>
+            <td><input type="text" id="result"></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

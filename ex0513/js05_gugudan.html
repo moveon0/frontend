@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function func01(){
+            let res = document.getElementById('n').value;
+            let div = document.getElementById('g');
+            let b =' '
+
+            for (var i = 1; i < 10; i++){
+                let a = `${res}*${i}=${res*i}<br>`;
+                b +=a;
+            }
+            div.innerHTML = b
+        }
+
+        function func02(){
+            let div = document.getElementById('g')
+            
+        }
+    </script>
+
+    <style>
+        div{background-color: black; color: white}
+    </style>
+</head>
+<body>
+    단: <input type="text" id="n">
+    <input type="button" value="계산시작" onclick="func01()">
+    <input type="button" value ="숨기기" id="hide">
+    <hr>
+    <div id="g"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <script>
+        const input = document.querySelector('input[type=text]')
+        console.log(input);
+        //DOM요소 속성 조정
+        //hasAttribute(속성) : 지정한 속성을 갖고 있는지 검사
+        //getAttribute(속성) : 속성의 값을 가져온다.
+        //setAttribute(속성, 값) : 속성과 속성값을 지정
+        //removeAttribute(속성) : 지정한 속성을 제거
+        //.attributes : 속성들을 모아서 배열로 반환
+        if(!input.hasAttribute('value')){
+            input.setAttribute('value','hello!');
+        }
+
+        console.log(input.getAttribute('value'));
+        input.removeAttribute('value')
+
+
+        
+    </script>
+    
+</body>
+</html>
